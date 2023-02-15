@@ -13,11 +13,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		session_start();
 		// $usu tiene campos CodRes y Correo 
 		$_SESSION['usuario'] = $usu;
-		if ($_SESSION['usuario']['EsAdmin']) 
+		if ($_SESSION['usuario']['EsAdmin']) 	// ENTRAR COMO ADMINISTRADOR
 		{
 			header("Location: GestAdmin.php");
 		}
-		else 
+		else 	// ENTRAR COMO USUARIO
 		{
 			$_SESSION['carrito'] = [];
 			header("Location: categorias.php");

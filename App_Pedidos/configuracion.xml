@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuracion>
-	<ip>127.0.0.1</ip>
+	<ip>localhost:3307</ip>
     <nombre>pedidos</nombre>
     <usuario>root</usuario>
     <clave></clave>    
