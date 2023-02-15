@@ -1,0 +1,44 @@
+html {
+    position: relative;
+
+  }
+
+body {
+    background: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-weight: 400;
+    flex-direction: column;
+    position: relative;
+    font-family: Hack, monospace;
+    margin-top: 200px;
+
+}
+
+.sesion{
+    font-size: 1.5em;
+}
+
+.sesion_enlace{
+    font-size: 1.1em;
+    font-family: Hack, monospace;
+    background: #0F0F6D;
+    color: #ffffff;
+    cursor: pointer;
+    padding: 1.5rem;
+    border: 0;
+    transition: all 0.5s;
+    border-radius: 10px;
+    width: auto;
+    position: relative;
+}
+
+.sesion_enlace:hover{
+    background: #3a3ab1;
+}
+
+a{
+    text-decoration: none;
+}
