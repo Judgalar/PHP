@@ -1,6 +1,8 @@
 <?php
     require_once 'bd.php';
     $res = string_config(dirname(__FILE__)."/configuracion.xml", dirname(__FILE__)."/configuracion.xsd");
+
+    
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -22,12 +24,27 @@
             gap: 20px;
             background-color: #FF6363;
         }
+        form{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 20px;
+        }
     </style>
 </head>
 <body>
-   <b>IP</b> <input type="text" value=<?=$res[0]?> >
-   <b>Nombre</b> <input type="text" value=<?=$res[1]?> >
-   <b>Usuario</b> <input type="text" value=<?=$res[2]?>>
-   <b>Clave</b> <input type="text" value=<?=$res[3]?>>
+    <form METHOD="POST" action="BDmodificarConfig.php">
+        <b>IP</b> <input type="text" name="ip" required value = <?=$res[0]?> >
+        <b>Nombre</b> <input type="text" name="nombre" required value = <?=$res[1]?> >
+        <b>Usuario</b> <input type="text" name="usuario" required value = <?=$res[2]?> >
+        <b>Clave</b> <input type="text" name="clave" value = <?=$res[3]?> >
+        <INPUT TYPE="SUBMIT">
+    </form>
+   
+
 </body>
 </html>

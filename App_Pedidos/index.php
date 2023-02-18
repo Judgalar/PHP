@@ -65,9 +65,11 @@
                     </table></center>
                     
                     <li><a class="dropdown-item d-flex justify-content-center" href="#">
-                        <button class="btn btn-danger" onclick="mostrarConfig()">
-                            Modificar datos de acceso
-                        </button>
+                        
+                            <button class="btn btn-danger" onclick="mostrarConfig()">
+                                Modificar datos de acceso
+                            </button>
+                        
                     </a></li>
                 </ul>
             </div>
@@ -75,7 +77,7 @@
         </div>
         <div class="d-flex" style="width: 100%; height: 100%">
             <iframe src="login.php" frameborder="0" width="100%" height="100%"></iframe>
-            <iframe src="modificarConfig.php" frameborder="0" id="config" style="display: none;"></iframe>
+            <iframe src="BDformConfig.php" frameborder="0" id="config" style="display: none;"></iframe>
         </div>
         
     </div>

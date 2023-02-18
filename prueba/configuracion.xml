@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuracion>
-	<ip>localhost:3306</ip>
-    <nombre>pedidos</nombre>
+	<ip>antonio</ip>
+    <nombre>paco</nombre>
     <usuario>root</usuario>
     <clave/>    
 </configuracion>
