@@ -1,0 +1,43 @@
+<!--Primer FORMULARIO con tipos variados
+ (Texto, radio, checkbox, desplegables, enviar, borrar) y 
+ archivo PHP que recibe los datos y muestra varios de ellos. 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Formulario</H1>
+        <Form style="line-height: 3vh;" action=Formulario.php>
+    
+            Nombre: <input type="text" name="nombre"> <br>
+    
+            Nota: <input type="Text" name="nota" value=5><br>
+    
+            Curso: <select name="curso">
+                <option value="1ºDAW">1ºDAW</option>
+                <option value="2ºDAW">2ºDAW</option>
+            </select><br>
+    
+            <div style="position:absolute;left:70%;top:5vh;">
+                <H3>Lenguaje favorito</H3>
+                HTML<input type="radio" id="html" name="fav_language" value="html"><br>
+                CSS<input type="radio" id="css" name="fav_language" value="css"><br>
+                JavaScript<input type="radio" id="javascript" name="fav_language" value="javaScript"><br>
+                PHP<input type="radio" id="php" name="fav_language" value="php"><br>
+                C++<input type="radio" id="c++" name="fav_language" value="c++"><br>
+            </div>
+    
+            <label><input type="checkbox" name="cbox" value="bot">Soy un Bot</label><br>
+    
+            <br><br>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Borrar">
+        </form>
+</body>
+</html>
