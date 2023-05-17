@@ -9,10 +9,15 @@ body {
 	padding: 0 20px;
 }
 
+main{
+	display: flex;
+}
+
 header {
 	background-color: #4CAF50;
 	color: #fff;
 	padding: 20px 0;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.38);
 }
 
 h1 {
@@ -35,6 +40,10 @@ nav a {
 	text-decoration: none;
 }
 
+nav a:hover {
+	border-bottom: 2px solid #ffffff;
+}
+
 main {
 	padding: 40px 0;
 }
@@ -43,30 +52,46 @@ h2 {
 	margin-bottom: 20px;
 }
 
-ul {
+.datos {
+	display: flex;
+	flex-direction: column;
 	list-style: none;
 	margin: 0;
 	padding: 0;
+	gap: 10px;
 }
 
-ul li {
+.datos li {
 	margin-bottom: 10px;
 }
 
-ul li strong {
+.datos li strong {
 	display: inline-block;
 	width: 120px;
 }
 
-.btn-editar {
+.btn {
 	display: inline-block;
 	background-color: #4CAF50;
 	color: #fff;
 	padding: 10px 20px;
 	border-radius: 5px;
 	text-decoration: none;
+	cursor: pointer;
+}
+.btn-cancelar {
+	display: inline-block;
+	background-color: #e93d38;
+	color: #fff;
+	padding: 10px 20px;
+	border-radius: 5px;
+	text-decoration: none;
+	cursor: pointer;
+}
+.btn-cancelar:hover{
+	background-color: #d9534f;
 }
 
-.btn-editar:hover {
+.btn:hover {
 	background-color: #398439;
 }

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Lista de usuarios</title>
+	<title>Alumnos</title>
 	<link rel="stylesheet" type="text/css" href="css/usuarios.css">
 </head>
 <body>
@@ -10,14 +10,14 @@
 			<h1>Lista de usuarios</h1>
 			<nav>
 				<ul>
-					<li><a href="#">Inicio</a></li>
-					<li><a href="#">Mi perfil</a></li>
-					<li><a href="#">Cerrar sesión</a></li>
+					<li><a href="perfil.php">Mi perfil</a></li>
+					<li><a href="#">Usuarios</a></li>
+					<li><a href="cerrarSesion.php">Cerrar sesión</a></li>
 				</ul>
 			</nav>
 		</div>
 	</header>
-	
+
 	<main>
 		<div class="container">
 			<div class="user-list-header">
@@ -28,29 +28,45 @@
 				</div>
 			</div>
 			<div class="user-list">
-				<div class="user-card">
-					<img src="https://via.placeholder.com/100" alt="Foto de perfil de usuario 1">
-					<div class="user-info">
-						<h3>usuario1</h3>
-						<p>John Doe</p>
-					</div>
-				</div>
-				<div class="user-card">
-					<img src="https://via.placeholder.com/100" alt="Foto de perfil de usuario 2">
-					<div class="user-info">
-						<h3>usuario2</h3>
-						<p>Jane Doe</p>
-					</div>
-				</div>
-				<div class="user-card">
-					<img src="https://via.placeholder.com/100" alt="Foto de perfil de usuario 3">
-					<div class="user-info">
-						<h3>usuario3</h3>
-						<p>Mark Smith</p>
-					</div>
-				</div>
+				<?php
+					require_once "conexion.php";
+					session_start();
+
+					// Realizar la consulta para obtener todos los usuarios
+					$query = "SELECT * FROM Usuarios WHERE es_administrador = 0";
+					$result = $conn->query($query);
+
+					// Verificar si hay registros devueltos
+					if ($result->num_rows > 0) {
+						// Recorrer los resultados y mostrar los usuarios
+						while ($row = $result->fetch_assoc()) {
+							// Acceder a los datos de cada usuario
+							$usuario = $row['nickName'];
+							$nombre = $row['nombre'];
+							$apellido = $row['apellido'];
+							
+							// Mostrar la información del usuario
+							echo ' <div class="user-card">
+									<img src="https://via.placeholder.com/100" alt="Foto de perfil de '.$usuario.'">
+									<div class="user-info">
+										<h3>'.$usuario.'</h3>
+										<p>'.$nombre.' '.$apellido.'</p>
+									</div>
+								</div> ';
+						}
+					} else {
+						// Si no hay registros, mostrar un mensaje
+						echo 'No se encontraron usuarios registrados.';
+					}
+
+					// Cerrar la conexión a la base de datos
+					$conn->close();
+
+				?>
 			</div>
 		</div>
 	</main>
 </body>
 </html>
+
+

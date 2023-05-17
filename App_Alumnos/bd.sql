@@ -4,15 +4,17 @@ CREATE DATABASE Alumnos;
 USE Alumnos;
 
 CREATE TABLE Usuarios (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    nickName VARCHAR(50) NOT NULL,
+    nickName VARCHAR(50) NOT NULL PRIMARY KEY,
     contrasena VARCHAR(50) NOT NULL,
     nombre VARCHAR(50) NOT NULL,
-    apellidos VARCHAR(50) NOT NULL,
-    correo_electronico VARCHAR(100) NOT NULL,
+    apellido VARCHAR(50) NOT NULL,
+    correo VARCHAR(100) NOT NULL,
     telefono VARCHAR(20) NOT NULL,
     direccion VARCHAR(100) NOT NULL,
-    enlace_curriculum VARCHAR(200) NOT NULL,
+    curriculum VARCHAR(200) NOT NULL,
     situacion_laboral VARCHAR(50) NOT NULL,
     es_administrador BOOLEAN NOT NULL DEFAULT 0
 );
+
+INSERT INTO Usuarios (nickName, contrasena, nombre, apellido, correo, telefono, direccion, curriculum, situacion_laboral, es_administrador)
+VALUES ('admin', 'admin', 'Admin', 'Admin', 'admin@example.com', '123456789', 'Dirección de Admin', 'https://ejemplo.com/curriculum.pdf', 'Empleado', 1);
