@@ -9,10 +9,10 @@ CREATE TABLE Usuarios (
     nombre VARCHAR(50) NOT NULL,
     apellido VARCHAR(50) NOT NULL,
     correo VARCHAR(100) NOT NULL,
-    telefono VARCHAR(20) NOT NULL,
-    direccion VARCHAR(100) NOT NULL,
-    curriculum VARCHAR(200) NOT NULL,
-    situacion_laboral VARCHAR(50) NOT NULL,
+    telefono VARCHAR(20),
+    direccion VARCHAR(100),
+    curriculum VARCHAR(200),
+    situacion_laboral VARCHAR(50),
     es_administrador BOOLEAN NOT NULL DEFAULT 0
 );
 

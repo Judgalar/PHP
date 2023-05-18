@@ -80,10 +80,10 @@
                                     <input type="text" name="nombre" placeholder="Nombre" required />
                                     <input type="text" name="apellido" placeholder="Apellido" required />
                                     <input type="email" name="correo" placeholder="E-mail" required />
-                                    <input type="tel" name="telefono" placeholder="Teléfono" required />
-                                    <input type="text" name="direccion" placeholder="Dirección" required />
-                                    <input type="text" name="cv" placeholder="Link Currículum" required />
-                                    <input type="text" name="situacion" placeholder="Situación" required />
+                                    <input type="tel" name="telefono" placeholder="Teléfono"  />
+                                    <input type="text" name="direccion" placeholder="Dirección"  />
+                                    <input type="text" name="cv" placeholder="Link Currículum"  />
+                                    <input type="text" name="situacion" placeholder="Situación"  />
                                     <input type="submit" class="btn" />
                                 </form>
                             </div>

@@ -23,11 +23,11 @@
 			<div class="user-list-header">
 				<h2>Usuarios</h2>
 				<div class="search-bar">
-					<input type="text" placeholder="Buscar usuarios">
-					<button>Buscar</button>
+					<input type="text" id="search" placeholder="Buscar usuarios">
+					<button id="clearBtn" type="button">Borrar</button>
 				</div>
 			</div>
-			<div class="user-list">
+			<div class="user-list" id="user-list">
 				<?php
 					require_once "conexion.php";
 					session_start();
@@ -46,9 +46,9 @@
 							$apellido = $row['apellido'];
 							
 							// Mostrar la información del usuario
-							echo ' <div class="user-card">
+							echo ' <div class="user-card" data-nickName="'.$usuario.'">
 									<img src="https://via.placeholder.com/100" alt="Foto de perfil de '.$usuario.'">
-									<div class="user-info">
+									<div class="user-info" id="user-info">
 										<h3>'.$usuario.'</h3>
 										<p>'.$nombre.' '.$apellido.'</p>
 									</div>
@@ -66,6 +66,8 @@
 			</div>
 		</div>
 	</main>
+	<script src="js/buscar.js"></script>
+	<script src="js/mostrarUsuario.js"></script>
 </body>
 </html>
 
